@@ -87,4 +87,4 @@ npm run dev
 
 ## 7. API Used
 - Currency data fetched from:
-```bash https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api```
+```https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api```
