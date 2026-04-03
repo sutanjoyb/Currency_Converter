@@ -1,16 +1,90 @@
-# React + Vite
+# Currency Converter App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive **Currency Converter** built using **React.js**, featuring real-time exchange rates, reusable components, and a clean UI.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+-  Convert between multiple currencies
+-  Real-time exchange rates using an external API
+-  Swap currencies instantly
+-  Built with reusable React components
+-  Custom React Hook for API handling
+-  Styled with Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+##  Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React.js**
+- **Custom Hooks**
+- **Tailwind CSS**
+- **Fetch API**
+
+---
+
+##  How It Works
+
+### 1. Custom Hook (`useCurrencyInfo`)
+- Fetches currency data from API
+- Updates data when base currency changes
+- Returns exchange rates object
+
+### 2. InputBox Component
+- Reusable input + dropdown UI
+- Controlled via props
+- Handles amount and currency selection
+
+### 3. App Component
+- Manages all state:
+  - `amount`
+  - `from`
+  - `to`
+  - `convertedAmount`
+- Handles:
+  - Conversion logic
+  - Currency swapping
+  - Form submission
+
+---
+
+## 4. Conversion Logic
+
+`convertedAmount = amount × exchange_rate`
+
+---
+
+## 5. UI Preview
+
+- Clean card layout
+- Two input sections:
+  - From
+  - To
+- Swap button in between
+- Convert button at bottom
+
+---
+
+## 6. Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/sutanjoyb/Currency_Converter.git
+
+# Navigate into project
+cd Currency_Converter
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+```
+
+---
+
+## 7. API Used
+- Currency data fetched from:
+```bash https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api```
