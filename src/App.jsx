@@ -11,7 +11,7 @@ function App() {
   const currencyInfo = useCurrencyInfo(from);
   const options = Object.keys(currencyInfo);
 
-  // ✅ Fixed swap logic
+  // Fixed swap logic
   const swap = () => {
     const temp = from;
     setFrom(to);
@@ -21,7 +21,7 @@ function App() {
     setConvertedAmount(amount);
   };
 
-  // ✅ Safe conversion
+  // Safe conversion
   const convert = () => {
     if (currencyInfo[to] && amount) {
       setConvertedAmount(amount * currencyInfo[to]);
@@ -92,7 +92,7 @@ function App() {
           </div>
         </div>
 
-        {/* FOOTER (NOW INSIDE BACKGROUND) */}
+        {/* FOOTER  */}
         <footer className="text-center text-black text-sm py-6">
           <div className="space-y-1">
             <p>&copy; 2026 Currency Converter. All Rights Reserved.</p>
